@@ -15,91 +15,111 @@ TM Krishna, "Music and Justice" [@ref]
 
 # From Konnakol Rhythms to Live Coding of the Self
 
-This work explores commonalities between contemporary live coding of algorithmic
-music, the Carnatic practice of Konnakol, towards establishing new musical
-practice. This work involves software development of the TidalCycles and Strudel
-live coding environments, adapting their representations for musical pattern
-inspired by Carnatic (South Indian) rhythmic structures, and supporting
-consideration of a new musical practice of 'auto live coding' or live coding of
-the self.
+In the following I compare the Carnatic (South Indian) musical
+practice of Konnakol with contemporary live coding of algorithmic
+music, as a means towards developing new musical practice. The conduit
+for this work is on software development of the TidalCycles and
+Strudel live coding environments, adapting their representations for
+musical pattern inspired by Carnatic rhythmic structures. I will
+conclude with a search for musical meaning in this work, including
+consideration of cultural appropriation, and the possibilities of
+'auto live coding' or live coding of the self.
 
 ## Konnakol
 
-Konnakol is a South Indian, Carnatic musical practice, developing since around
-200 CE. Konnakol involves the oral recitation of solkattu, which are groups of
-non-lexical syllables or vocables associated with the Mrdigangam drum. Konnakol
-is an oral tradition, transmitted and learned through recitation and listening
-rather than by reading notation. Konnakol rhythms may be extremely complex,
-heavily syncopated with frequent changes of speeds and addition/subtraction of
-beats from successive repetitions. Still, Konnakol artists are able to perfectly
-match their rhythm to the tala cycle. While performing, konnakol artists mark
-the tala (roughly the metric cycle) by clapping, in particular by repeating a
-sequence of clap-finger counts (laghu) and clap-waves (drutam).
+Konnakol is a Carnatic musical practice, developing since around 200
+CE [ref]. Konnakol involves the oral recitation of solkattu, which are
+phrase groups of single-syllable vocable words, which are non-lexical,
+but associated with articulations of the Mrdigangam drum. Konnakol is
+an oral tradition, generally transmitted and learned through
+recitation and listening rather than via notation. Konnakol
+performances are rhythmically highly complex, heavily syncopated with
+frequent changes of speeds, and e.g. addition/subtraction of beats
+from successive repetitions. Still, there is a steady underlying
+pulse, where Konnakol artists are able to perfectly match their
+rhythmic transformations to a particular _tala_ structure. While
+performing, konnakol artists mark the tala with their hands, for
+example by repeating a sequence of clap-finger counts (laghu) and
+clap-waves (drutam).
 
-I came to konnakol relatively late in life, and have only been learning konnakol
-rhythms for approximately one year, but have already gained a great deal from my
-studies. Unfortunately, I do not know any Indian languages, but there are
-some texts in English on the artform. "The Art of Konnakkol", is a great
-practical introduction which covers some historical and cultural context, and
-which would go well with some of the many video tutorials available that you can
-find online. Vocalist and activist TM Krishna is a key reference for cultural
-and political background on carnatic music. For Western viewpoints, Lisa Young
-has made her Masters and PhD theses on the topic available online. Rafael Reina
-has a book on applying Karnatic rhythmical techniques to Western Classical
-music, and David Nelson has published a Solkattu Manual. There is also software
-with illuminating documentation, such as the Carnatic Music Typesetter by Arun
-K. These texts aside, as a British person exploring Karnatic music without
-having ever travelled to India, I am mindful that I am missing much of the
-context of this artform, and feel at the start of a journey in many respects.
+I have been learning konnakol rhythms for approximately one year under
+the generous tuition of percussionist B C Manjunath, an experience
+that has already been transformational to understanding and feeling
+rhythm. There are not a great deal of English texts on the artform,
+but "The Art of Konnakkol", is an excellent practical introduction
+which covers some historical and cultural context, and which would go
+well with some of the many video tutorials available online. Vocalist
+and activist TM Krishna, quoted at the beginning of this paper, is a
+key reference for cultural and political background on carnatic music
+[@ref]. For Western viewpoints, Lisa Young has made her Masters and
+PhD theses on the topic available online [@ref]. In Italy, (?) Rafael
+Reina has a book on applying Karnatic rhythmical techniques to Western
+Classical music [@ref], and in Australia, David Nelsony has published
+a Solkattu Manual [@ref]. There is also software with illuminating
+documentation, such as the Carnatic Music Typesetter by Arun K
+[@link]. These texts aside, as an English person exploring Karnatic
+music without having ever travelled to India, I am mindful that I am
+missing much of the context of this artform, and feel at the start of
+a journey in many respects.
 
-Nothing can stand in for actually learning and practicing konnakol rhythms. I am
-mindful of what Kofi Agawu calls "paper rhythms"; those rhythmic transformations
-which are apparent on paper, but have no living reality when performed or
-listened/danced to. I have been lucky to take elementary konnakol lessons with
-world reknowned percussionist B C Manjunath, an experience that has changed how
-I think about and make music, and music software. I use the phrase _konnakol
-rhythms_ advisedly; konnakol is rich with carnatic structures, for example the
-concept of tala has many components to it, the major of which I have not touched
-on. My focus in learning has only been on rhythmic aspects of konnakol.
+Nothing can stand in for actually learning and practicing konnakol
+rhythms. We should take care not to be too distracted by what Kofi
+Agawu calls "paper rhythms"; those rhythmic transformations which are
+apparent on paper, but have no living reality when performed or
+listened/danced to -- or indeed vice-versa. I have been lucky to take
+elementary konnakol lessons with world reknowned percussionist B C
+Manjunath, an experience that has changed how I think about and make
+music, and music software. I use the phrase _konnakol rhythms_
+advisedly; konnakol is rich with carnatic structures, for example the
+wide range of talas (37 or more) have many aspects to them, the
+majority of which I have not touched on. My focus in learning has only
+been on rhythmic aspects of konnakol.
 
-So while as a beginner I have only touched on certain aspects of Konnakol,
-focussing on rhythm, it has allowed me to build a sense of internal pulse within
-a tala, and feeling how the rhythm moves around within that tala. It has felt
-like learning a rhythm from multiple perspectives; it’s one thing to learn it
-without clapping, then another to learn it while clapping, and it feels
-completely different depending on whether I’m attending to the syllables, the
-rhythmic structure, or the tala. It hard to explain in words, but taking in a
-new rhythm can be an at times frustrating process of both learning and
-forgetting as I come at it from different directions.
+Nonetheless learning konnakol rhythms has allowed me to build a sense
+of internal pulse within a tala, and feeling how the rhythm moves
+around within that tala. It has felt like learning a rhythm from
+multiple perspectives; it is one thing to learn it without clapping,
+then another to learn it while clapping, and it feels completely
+different depending on whether I am attending to the syllables, the
+rhythmic structure, or the tala. To get to grips with reciting a
+rhythm I might notate it, but it is only when I leave that notation
+behind that I begin to really feel a rhythm. It is hard to explain in
+words, but taking in a new rhythm can be an at times frustrating
+process of both learning and forgetting as I come at it from different
+directions.
 
-These konnakol rhythms are fundamentally algorithmic, and this is why it is
-possible to recite long, complex compositions without notation. Complex patterns
-emerge from the simple parts, and ways of transforming and combining them that
-the konnakol artist is internally calculating. Numerical calculation becomes
-part of an embodied experience, where notation is only used as a last resort.
+These konnakol rhythms are fundamentally algorithmic, and this is why
+it is possible to recite long, complex compositions without
+notation. Numerical calculation becomes part of an embodied
+experience, so that complex patterns emerge from simple parts. Or as B
+C Manjunath puts it:
 
-"You cannot be complex just for the sake of being complex ... Paella is complex,
-it has a lot of elements in it ... but it is built out of many simple
-things. [If they are] imbided into each other, then that becomes complex. ... So
-you have to get bored by doing a lot of simple things. ... If you understand
-that you are trying to make something complex then that is a failure of a
-musician. The complexity should be for others, but for me it should be simple."
+"You cannot be complex just for the sake of being complex ... Paella
+is complex, it has a lot of elements in it ... but it is built out of
+many simple things. [If they are] imbided into each other, then that
+becomes complex. ... So you have to get bored by doing a lot of simple
+things. ... If you understand that you are trying to make something
+complex then that is a failure of a musician. The complexity should be
+for others, but for me it should be simple."
 
-"Rules are always redefined ... You learn a rule, and that becomes the new
-norm - that becomes the rule. Then the already defined rule, the area
-... becomes larger, and then you teach it to wsomeone else. They learn this
-rule, some people want to stay in the same circle but some people want to forget
-half of it, maybe they remember half of it; they break the rule, and that
-becomes a new norm, you know? So rules are always being set. But, there are
-always some rules which ... must not be broken. These rules are so strong
-because it's hard to break them ... these are time-tested rules. If you try to
-question them, there is always an answer, but you have to be intelligent enough
-to find the answer. So only someone who knows the rules really well can break
-the rules." - live coding is up to this challenge.
+Improvisation - quote from Mark Fell's interview with Narkul
+
+"Rules are always redefined ... You learn a rule, and that becomes the
+new norm - that becomes the rule. Then the already defined rule, the
+area ... becomes larger, and then you teach it to wsomeone else. They
+learn this rule, some people want to stay in the same circle but some
+people want to forget half of it, maybe they remember half of it; they
+break the rule, and that becomes a new norm, you know? So rules are
+always being set. But, there are always some rules which ... must not
+be broken. These rules are so strong because it's hard to break them
+... these are time-tested rules. If you try to question them, there is
+always an answer, but you have to be intelligent enough to find the
+answer. So only someone who knows the rules really well can break the
+rules." - live coding is up to this challenge.
 
 Paraphrasing; any computer sound can be formalised in konnakol but not
-vice-versa, because the body is a much more advanced system for thinking about
-sound than any computer.
+vice-versa, because the body is a much more advanced system for
+thinking about sound than any computer.
 
 ## TidalCycles
 
