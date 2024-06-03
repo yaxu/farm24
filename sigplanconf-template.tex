@@ -1,0 +1,177 @@
+\documentclass[preprint,numbers]{sigplanconf}
+
+% The following \documentclass options may be useful:
+
+% preprint       Remove this option only once the paper is in final form.
+%  9pt           Set paper in  9-point type (instead of default 10-point)
+% 11pt           Set paper in 11-point type (instead of default 10-point).
+% numbers        Produce numeric citations with natbib (instead of default author/year).
+% authorversion  Prepare an author version, with appropriate copyright-space text.
+
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{fancyvrb}
+\usepackage{framed}
+\usepackage{hyperref}
+\usepackage{graphicx}
+
+\newcommand{\cL}{{\cal L}}
+
+
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\begin{document}
+
+\special{papersize=8.5in,11in}
+\setlength{\pdfpageheight}{\paperheight}
+\setlength{\pdfpagewidth}{\paperwidth}
+
+\conferenceinfo{FARM'24}{2nd September, 2024, Milan, Italy}
+\copyrightyear{2024}
+%\copyrightdata{978-1-nnnn-nnnn-n/yy/mm}\reprintprice{\$15.00}
+%\copyrightdoi{nnnnnnn.nnnnnnn}
+
+% For compatibility with auto-generated ACM eRights management
+% instructions, the following alternate commands are also supported.
+%\CopyrightYear{2016}
+%\conferenceinfo{CONF'yy,}{Month d--d, 20yy, City, ST, Country}
+%\isbn{978-1-nnnn-nnnn-n/yy/mm}\acmPrice{\$15.00}
+%\doi{http://dx.doi.org/10.1145/nnnnnnn.nnnnnnn}
+
+% Uncomment the publication rights used.
+%\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}  % default
+\setcopyright{rightsretained}
+
+
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+
+%\titlebanner{banner above paper title}        % These are ignored unless
+%\preprintfooter{short description of paper}   % 'preprint' option specified.
+
+\title{From Konnakol to Live Coding}
+%\subtitle{From Konnakol to Live Coding}
+
+\authorinfo{Alex McLean}
+           {Then Try This}
+           {alex@slab.org}
+
+\maketitle
+
+\begin{abstract}
+This is the text of the abstract.
+\end{abstract}
+
+% 2012 ACM Computing Classification System (CSS) concepts
+% Generate at 'http://dl.acm.org/ccs/ccs.cfm'.
+\begin{CCSXML}
+<ccs2012>
+   <concept>
+       <concept_id>10010405.10010469.10010471</concept_id>
+       <concept_desc>Applied computing~Performing arts</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+   <concept>
+       <concept_id>10010405.10010469.10010475</concept_id>
+       <concept_desc>Applied computing~Sound and music computing</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+   <concept>
+       <concept_id>10003752.10003753</concept_id>
+       <concept_desc>Theory of computation~Models of computation</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+   <concept>
+       <concept_id>10011007.10011006.10011050.10011017</concept_id>
+       <concept_desc>Software and its engineering~Domain specific languages</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+   <concept>
+       <concept_id>10011007.10011006.10011008.10011009.10011012</concept_id>
+       <concept_desc>Software and its engineering~Functional languages</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+ </ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Applied computing~Performing arts}
+\ccsdesc[500]{Applied computing~Sound and music computing}
+\ccsdesc[500]{Theory of computation~Models of computation}
+\ccsdesc[500]{Software and its engineering~Domain specific languages}
+\ccsdesc[500]{Software and its engineering~Functional languages}
+% end generated code
+
+\keywords
+carnatic music, konnakol, konnakkol, live coding, rhythm
+
+\input{farm24.tex}
+
+\end{document}
