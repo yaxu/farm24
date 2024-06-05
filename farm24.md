@@ -14,7 +14,7 @@ moving and varied. Every voice is not identical; the possibility of music
 bending and swaying across regions, traditions and time is real. At no point is
 the music etched in stone, trapped in time, a stone tablet of commandments.}{T. M. Krishna, "Music and Justice" [5]}
 
-# From Konnakol Rhythms to Live Coding of the Self
+# Introduction
 
 As a computer music practice, the 'from-scratch' style of live coding
 centres around the manipulation of musical notation, but where those
@@ -36,7 +36,7 @@ musical meaning in this work, including consideration of cultural
 appropriation, and the possibilities of creating performances that
 shift between live coding of the computer and of the self.
 
-## Konnakol
+# Konnakol
 
 Konnakol is a Carnatic musical practice, developing since around 200
 CE [@sankaranArtKonnakkolSolkattu2010a, p. 3]. Konnakol involves the
@@ -72,7 +72,7 @@ Indian musician Nakul Krishnamurthy is illuminating, exploring
 improvisation, notation and tradition in Carnatic music
 [@fellStructureSynthesisAnatomy2022, pp. 243-259].
 
-### Learning Konnakol
+## Learning Konnakol
 
 However, nothing can stand in for actually learning and practising
 konnakol rhythms.^[I use the phrase _konnakol rhythms_ advisedly;
@@ -131,7 +131,7 @@ https://www.youtube.com/live/6kYwZ8S-qBQ?feature=shared&t=1761]
 <!-- vice-versa, because the body is a much more advanced system for -->
 <!-- thinking about sound than any computer. -->
 
-## TidalCycles and Strudel - live coding languages for pattern
+# TidalCycles and Strudel - live coding languages for pattern
 
 TidalCycles and Strudel are software environments for live coding that
 I am adapting to better represent konnakol-inspired rhythmic
@@ -264,7 +264,7 @@ approach was over-complicated, which showed in the end-user interface. I
 eventually settled on a simpler approach, based on the idea of maintaining the
 'tactus' of a pattern.
 
-### Musical tactus
+## Musical tactus
 
 In music, the _tactus_ is a high-level pulse felt in the music, known
 as the 'clapping rate', or the pulse that an individual or crowd
@@ -372,7 +372,7 @@ factor. The result is a 84 step pattern, which fits the 7-step "wave wave -
 clap - clap - " cycle of the _misra chapu_ tala, as visualised in
 Fig. 2.
 
-## Fitting the tala
+# Fitting the tala
 
 According to Trichy Sankaran [@sankaranArtKonnakkolSolkattu2010, pg. 36], the
 term _tala_ is used in a broad sense to describe all important rhythmic
@@ -425,7 +425,7 @@ forward. Rather than attempting to codify the rules of konnakol then,
 I focus on allowing musicians to choose, adapt and apply rules
 themselves, inspired by konnakol.
 
-## Developing practice
+# Developing practice
 
 As stated earlier, I believe that the technical development of
 computer music language should be part of a wider development of a
@@ -447,7 +447,7 @@ performance, and informal feedback from my first public performance
 trialling this approach at EMF camp (May 2024, Eastnor UK) has been
 encouraging.
 
-## Cultural appropriation
+# Cultural appropriation
 
 Developing live coding practice inspired by konnakol as a European is
 of course an act of cultural appropriation. Although intermixing of
@@ -476,7 +476,7 @@ culture, and explore the resulting tensions through scholarship and
 collaboration, while opening myself to criticism, and opening the
 software itself as free/open source software.
 
-## Conclusion
+# Conclusion
 
 Konnakol throws a great deal of light on 'from-scratch' live coding
 practice. Too often, algorithmic music is reduced to sequencing,
@@ -488,7 +488,7 @@ algorithms, we are able to embody abstraction so that we can
 creatively improvise with algorithms through our bodies, reclaiming
 computation from automation.
 
-## Acknowledgements
+# Acknowledgements
 
 This work is funded by a UKRI Future Leaders Fellowship [grant number MR/V025260/1].
 
