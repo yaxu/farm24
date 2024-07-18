@@ -136,7 +136,7 @@ The `s_tour` function above adds the "red pink" pattern progressively backwards 
 \begin{figure*}
 \centering
 \includegraphics[width=1\textwidth]{figures/misrachapu.png}
-\caption{Grouping in Misra Chapu}
+\caption{Grouping in misra chapu tala}
 \end{figure*}
 
 ```javascript
@@ -153,7 +153,7 @@ clap - clap - " cycle of the _misra chapu_ tala, as visualised in Fig. 2.
 
 According to Trichy Sankaran, the term _tala_ is used in a broad sense to describe all important rhythmic principles, but also in a specific sense to refer to metrical cycles
 "... composed of traditionally determined rhythmic units which are indicated through conventionally followed hand gestures." The tala provides the ground for rhythm, influencing our experience of rhythmic patterns significantly, being
-"the foundation upon which intricate devices of cross-rhythm and syncopation are built.[@sankaranArtKonnakkolSolkattu2010, pg. 36]
+"the foundation upon which intricate devices of cross-rhythm and syncopation are built.[@sankaranArtKonnakkolSolkattu2010a, pg. 36]
 
 It is important for a piece to align with the cyclic time-measure of a particular tala, by having a total number of beats divisible by the duration of the tala. In other words, the piece should perfectly end at the _sam_ -- the beginning and therefore also the end of a cycle. A subsection within a piece need not fit the tala, however. For example a traditional _Korvai_ is divided into two sections, with the second part containing groups of three repetitions of a phrase, each group repeated three times divided by gaps. The piece can then fit the tala by adjusting the repeated phrase or the duration of gaps between groups. The konnakol or mridangam artist calculates how to best fit the piece to the tala through such adjustments.
 

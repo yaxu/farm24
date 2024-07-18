@@ -1,4 +1,5 @@
-\documentclass[preprint,numbers]{sigplanconf}
+\documentclass[sigplan,screen]{acmart}
+%\documentclass[numbers]{sigplanconf}
 
 % The following \documentclass options may be useful:
 
@@ -56,15 +57,28 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
-
 \begin{document}
+
+\title{From Konnakol to Live Coding}
+
+\author{Alex McLean}
+\orcid{0000-0002-7428-7935}
+\affiliation{%
+  \institution{Then Try This}
+  \city{Sheffield}
+  \country{United Kingdom}
+}
+\email{alex@slab.org}
 
 \special{papersize=8.5in,11in}
 \setlength{\pdfpageheight}{\paperheight}
 \setlength{\pdfpagewidth}{\paperwidth}
 
-\conferenceinfo{FARM'24}{2nd September, 2024, Milan, Italy}
-\copyrightyear{2024}
+%\conferenceinfo{FARM'24}{2nd September, 2024, Milan, Italy}
+
+
+
+%\copyrightyear{2024}
 %\copyrightdata{978-1-nnnn-nnnn-n/yy/mm}\reprintprice{\$15.00}
 %\copyrightdoi{nnnnnnn.nnnnnnn}
 
@@ -75,11 +89,35 @@
 %\isbn{978-1-nnnn-nnnn-n/yy/mm}\acmPrice{\$15.00}
 %\doi{http://dx.doi.org/10.1145/nnnnnnn.nnnnnnn}
 
+
+%\copyrightyear{2024}
+%\acmYear{2024}
+%\setcopyright{rightsretained}
+%\conferenceinfo{FARM '24}{Proceedings of the 12th ACM SIGPLAN International Workshop on Functional Art, Music, Modelling, and Design, September 2, 2024, Milan, Italy}
+%\acmBooktitle{Proceedings of the 12th ACM SIGPLAN International Workshop on Functional Art, Music, Modelling, and Design (FARM '24), September 2, 2024, Milan, Italy}
+%\doi{10.1145/3677996.3678290}
+%\isbn{979-8-4007-1099-5/24/09}
+
+
+%%% The following is specific to FARM '24 and the paper
+%%% 'From Konnakol to Live Coding'
+%%% by Alex McLean.
+%%%
+\setcopyright{rightsretained}
+\acmDOI{10.1145/3677996.3678290}
+\acmYear{2024}
+\copyrightyear{2024}
+\acmISBN{979-8-4007-1099-5/24/09}
+\acmConference[FARM '24]{Proceedings of the 12th ACM SIGPLAN International Workshop on Functional Art, Music, Modelling, and Design}{September 2, 2024}{Milan, Italy}
+\acmBooktitle{Proceedings of the 12th ACM SIGPLAN International Workshop on Functional Art, Music, Modelling, and Design (FARM '24), September 2, 2024, Milan, Italy}
+\acmSubmissionID{icfpws24farmmain-p38-p}
+\received{2024-06-02}
+\received[accepted]{2024-07-02}
+\setcctype{cc-by}
+
 % Uncomment the publication rights used.
 %\setcopyright{acmcopyright}
 %\setcopyright{acmlicensed}  % default
-\setcopyright{rightsretained}
-
 
 \newcommand{\VerbBar}{|}
 \newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
@@ -121,14 +159,12 @@
 %\titlebanner{banner above paper title}        % These are ignored unless
 %\preprintfooter{short description of paper}   % 'preprint' option specified.
 
-\title{From Konnakol to Live Coding}
+%\title{From Konnakol to Live Coding}
 %\subtitle{From Konnakol to Live Coding}
 
-\authorinfo{Alex McLean}
-           {Then Try This}
-           {alex@slab.org}
-
-\maketitle
+%\authorinfo{Alex McLean}
+%           {Then Try This}
+%           {alex@slab.org}
 
 \begin{abstract}
 Konnakol is a South Indian, Carnatic musical practice involving the
@@ -141,6 +177,8 @@ examples, and the development of a hybrid practice that integrates
 vocal patterns with live coding. I conclude by considering the issue
 of cultural appropriation around this work.
 \end{abstract}
+
+\maketitle
 
 % 2012 ACM Computing Classification System (CSS) concepts
 % Generate at 'http://dl.acm.org/ccs/ccs.cfm'.
@@ -181,8 +219,7 @@ of cultural appropriation around this work.
 \ccsdesc[500]{Software and its engineering~Functional languages}
 % end generated code
 
-\keywords
-carnatic music, konnakol, konnakkol, live coding, rhythm
+\keywords{carnatic music, konnakol, konnakkol, live coding, rhythm}
 
 \input{farm24.tex}
 
