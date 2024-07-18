@@ -9,23 +9,23 @@ nocite: |
 
 # Introduction
 
-The above epigraph from T. M. Krishna celebrates the role of living memory and continuous change in 'non-scribal' musical practice. From my European perspective this is refreshing, when printed staff notation has such a hold over music-related scholarship in the West. However, this oral/scribal distinction in music is less clear in digital musics where notations can be open to change and even ephemeral, for example the 'from-scratch' style of live coding, where notations are written, manipulated and (finally) deleted live, gaining an improvisatory, time-bound, ephemeral quality. In these respects, live coding is closer to active speech than printed notation. This suggests that the comparatively new practice of live coding has a great deal to learn from the Indian practices referred to by T. M. Krishna.
+The above epigraph from T. M. Krishna celebrates the role of living memory and continuous change in 'non-scribal' musical practice. From my European perspective this is refreshing, when printed staff notation has such a hold over music-related scholarship in the West. However, this oral/scribal dichotomy is less distinct in those computer-supported musics where notations can be open to continual change, for example the 'from-scratch' style of live coding, where notations are written, manipulated and (finally) deleted live, gaining an improvisatory, time-bound, ephemeral quality. In these respects, live coding is closer to active speech than printed notation. This suggests that the comparatively new practice of live coding has a great deal to learn from the far older (and therefore far more developed) practices referred to by T. M. Krishna.
 
 Towards this end, in the following I compare the South Indian vocal practice of _konnakol_ with contemporary algorithmic music, as a means to develop new live coding practice. The conduit for this work is the software development of the TidalCycles and Strudel live coding environments, adapting their representations for musical pattern inspired by Carnatic rhythmic structures. I will conclude with a search for musical meaning in this approach, including consideration of cultural appropriation, and the possibilities of creating performances that shift between live coding of the computer and of the self.
 
 # Konnakol
 
-Konnakol is an ancient Carnatic musical practice, developing since around 200CE [@sankaranArtKonnakkolSolkattu2010a, p. 3]. Konnakol involves the oral recitation of _solkattu_ phrase groups of vocable words, which are non-lexical, but closely associated with articulations of the mridangam drum, as well as movements within the bharatanatyam dance tradition. As a non-scribal, oral tradition, konnakol is generally transmitted and learned through recitation and listening rather than via notation. Konnakol rhythms are highly complex and heavily syncopated with frequent changes of speeds, and e.g. addition/subtraction of beats from successive repetitions. Still, there is always a steady underlying pulse, where konnakol artists are able to perfectly match their rhythmic transformations to a particular _tala_ structure. While performing, konnakol artists mark the tala with their hands, for example by repeating a sequence of clap-finger counts (laghu) and clap-waves (drutam).
+Konnakol is a Carnatic musical practice with ancient roots, developing since around 200CE [@sankaranArtKonnakkolSolkattu2010a, p. 3]. Konnakol involves the oral recitation of _solkattu_ phrase groups of vocable words, which are non-lexical, but closely associated with articulations of the mridangam drum, as well as movements within the bharatanatyam dance tradition. As a non-scribal, oral tradition, konnakol is generally transmitted and learned through recitation and listening rather than via notation. Konnakol rhythms are highly complex and heavily syncopated with frequent changes of speeds, and e.g. addition/subtraction of beats from successive repetitions. Still, there is always a steady underlying pulse, where konnakol artists are able to perfectly match their rhythmic transformations to a particular _tala_ structure. While performing, konnakol artists mark the tala with their hands, for example by repeating a sequence of clap-finger counts (laghu) and clap-waves (drutam).
 
-As a mono-lingual English speaker, I am unable to access much of the literature on the art form, but in English "The Art of Konnakkol" by Trichy @sankaranArtKonnakkolSolkattu2010a is an excellent practical introduction which covers some historical and cultural context, and vocalist and activist T.M. Krishna is a key reference for cultural and political background on Carnatic music [@krishnaSouthernMusic2017]. Lisa Young has made her Masters and PhD theses on konnakol available
-[@youngKonakkolHistoryDevelopment1998,@youngKonakkolHistoryDevelopment1998], Rafael Reina has a book on applying Carnatic rhythmical techniques to Western Classical music [@reinaApplyingKarnaticRhythmical2015a], and David Nelson has published a Solkattu Manual [@nelsonSolkattuManual2008]. For a computer music perspective, an interview by Rotherham-based musician Mark Fell with the Glasgow-based Indian musician Nakul Krishnamurthy is full of insight, exploring improvisation, notation and tradition in Carnatic music
+As a mono-lingual English speaker, I am unable to access much of the literature on the art form, but in English "The Art of Konnakkol" by Trichy Sankaran @sankaranArtKonnakkolSolkattu2010a is an excellent practical introduction which covers some historical and cultural context, and vocalist and activist T.M. Krishna is a key reference for cultural and political background on Carnatic music [@krishnaSouthernMusic2017]. Lisa Young has made her Masters and PhD theses on konnakol available
+[@youngKonakkolHistoryDevelopment1998,@youngKonakkolHistoryDevelopment1998], Rafael Reina has a book on applying Carnatic rhythmical techniques to Western Classical music [@reinaApplyingKarnaticRhythmical2015a], and David Nelson has published a Solkattu Manual [@nelsonSolkattuManual2008]. For a computer music perspective, an interview by Rotherham-based musician Mark Fell with the Glasgow-based Indian musician Nakul Krishnamurthy is insightful, exploring improvisation, notation and tradition in Carnatic music
 [@fellStructureSynthesisAnatomy2022, pp. 243-259].
 
 ## Learning Konnakol
 
 However, nothing can stand in for actually learning and practising konnakol rhythms.^[I use the phrase _konnakol rhythms_ advisedly; konnakol is a rich art form, the majority of which I have not touched on. So far my focus has been on rhythm.] Indeed, we should take care not to be too distracted by what Kofi Agawu calls "paper rhythms" [@agawuStructuralAnalysisCultural2006]; those rhythmic transformations which are apparent on paper, but have no living reality when performed, listened to and danced to. I have been lucky to take elementary konnakol lessons with renowned percussionist B C Manjunath, changing how I think about and make both music and music software.
 
-This learning process has allowed me to develop a sense of internal pulse within a tala, and to feel how rhythms move around within that tala. It has felt like learning rhythm from multiple perspectives -- it is one thing to learn to recite a sequence, and something quite different to learn to do so while clapping the tala. The rhythms then feel different depending on whether I am attending to the syllables, the rhythmic structure, or the tala. I sometimes write the syllables down to help understand the structure of a rhythm, but it is only when I leave that notation behind that I begin to _really_ learn and feel a rhythm. It is hard to explain in words, but taking in a new rhythm can at times be a slightly frustrating process of learning and forgetting as I come at it from different directions.
+This learning process has allowed me to develop a sense of internal pulse within a tala, and to feel how rhythms move around within that tala. It has felt like learning rhythm from multiple perspectives -- it is one thing to learn to recite a sequence, and something quite different to learn to do so while clapping the tala. The rhythms then feel different depending on whether I am attending to the syllables, the rhythmic structure, or the tala. I sometimes write the syllables down to help understand the structure of a rhythm, but it is only when I leave that notation behind that I begin to _really_ learn and feel a rhythm. It is hard to explain in words, but taking in a new rhythm can at times be a slightly frustrating process of learning and forgetting as I come at it from different directions before beginning to understand it as a whole.
 
 Konnakol rhythms are fundamentally algorithmic, and this is why it is possible to recite long, complex compositions without notation; the performer generates music based on simple numerical principles applied to a deep, embodied knowledge of rhythm. Or as B C Manjunath puts it:
 
@@ -55,11 +55,11 @@ data Pattern a =
 
 A pattern then, is a function from (rational) time to events. A pattern function is queried for a particular timespan window, and returns events taking place within that window. Each such event consists of a value, and a timespan during which that event value is active within the queried time window. Discrete events have an additional timespan representing an event's 'whole' timespan. This is needed to represent an event that is a fragment of a larger one; this occurs where an event extends outside the queried window, or where a pattern transformation slices up events into parts.
 
-Because patterns are functions, they are highly composable, in both the computer scientific and musical sense. However one problem with patterns is that there are a diverse multitude of ways to compose them together. As a result, Tidal defines a range of applicative function application and monadic bind/join functions. With a rich combinator library of pattern transformations, Tidal provides rich and flexible domain-specific library, designed to terse and expressive enough to be used during live performance.
+Because patterns are functions, they are highly composable, in both the computer scientific and musical sense. However one problem with patterns is that there are a diverse multitude of ways to compose them together. As a result, Tidal defines a range of applicative function application and monadic bind/join functions. With a rich combinator library of pattern transformations, Tidal provides rich and flexible domain-specific library, designed to be terse and expressive enough to improvise with in live performance.
 
-Strudel is implemented in JavaScript, and so does not have the benefits of a type system. Nonetheless it is a faithful port of Tidal as described above, including its approach to applicative and monadic-style functional composition. Indeed, all the examples in the following are in implemented in Strudel, so that the reader can play with them in a web browser without having to install Tidal.
+Strudel is implemented in JavaScript, and so does not have the benefits of a type system. Nonetheless it is a faithful port of Tidal as described above, including its approach to applicative and monadic-style functional composition. Indeed, all the examples in the following are in implemented in Strudel, so that the reader can play with them in a web browser without having to install Tidal. Thanks to the work of Felix Roos (a lead developer of Strudel), it is even possible to work with Strudel using Tidal's Haskell syntax, via the tree-sitter-haskell project.
 
-## Expanding Tidal and Strudel to support Carnatic-esque patterns
+## Expanding Tidal and Strudel to support Konnakol-inspired patterns
 
 One limitation of representing patterns with functions is that they are opaque, so that when combining two patterns, it's difficult to fully consider the structure of those patterns. Take for example concatenation -- appending one pattern to another. Functions of time are in principle infinite, so we can never reach the end of the first pattern in order to play the second one. Tidal's answer to this is cycle-based composition, where a cycle is roughly equivalent to a measure or bar in Western classical music, but is perhaps closer to the idea of a tala cycle in Indian music. Rather than concatenating whole patterns, Tidal concatenates successive cycles, resulting in a cyclic interleaving of patterns.
 
@@ -71,22 +71,21 @@ cat("red green", "blue orange purple");
 
 As you can see in the above visual example using Strudel, each cycle is split in half, with the first half containing two events of one quarter of cycle each, and the second half having three events of one sixth of a cycle each.^[The double-quoted text denotes the 'mini-notation', a mini-language implemented in both Strudel and Tidal for describing potentially complex polymetric rhythms. Here they are used to describe simple contiguous sequences.] Sometimes however, we might want divide time up 'stepwise', so that each event in the resulting pattern has equal duration, taking up one fifth of a cycle. Indeed, stepwise transformation and composition of patterns is a pervasive feature of Carnatic music. Strudel and Tidal now have an `s_cat` (stepwise cat) function for this:
 
-```javascript s_cat("red green", "blue orange purple");
-
+```javascript
+s_cat("red green", "blue orange purple");
 ```
 
 ![](figures/s_cat.png){ height=3% width=40%}
 
 In the above, all five steps have the same duration. Even for this basic functionality, the `s_cat` function needs to know something about the structure of the two patterns in order to combine them. That is not possible when composing functions of time together, as the structure of the patterns is not known until the resulting function is later queried.
 
-It took two different attempts to support this stepwise functionality. The first was to create a pattern type class, with the existing functional patterns as one instance, plus an additional type instance implementing patterns as data structures. This worked to a large extent, with a great deal of functionality implemented relative to the type class, rather than the two instances. However despite much work, I came to the conclusion that this approach was over-complicated, which showed in the end-user interface. However despite much work, I came to the conclusion that this approach was over-complicated, which showed in the end-user interface. I eventually settled on a simpler approach, based on the idea of maintaining the
-'tactus' of a pattern.
+It took two different attempts to support this stepwise functionality. The first was to create a pattern type class, with the existing functional patterns as one instance, plus an additional type instance implementing patterns as data structures. This worked to a large extent, with a great deal of functionality implemented relative to the type class, rather than the two instances. However despite much work, I came to the conclusion that this approach was over-complicated, which showed in the resulting end-user interface. I eventually settled on a simpler approach, based on the idea of maintaining the 'tactus' of a pattern.
 
 ## Musical tactus
 
-In music, the _tactus_ is a high-level pulse felt in the music, known as the 'clapping rate', or the pulse that an individual or crowd chooses to clap along with in a piece of music. There is work to automatically infer the most likely tactus from a piece of music or audio signal in the Music Information Retrieval field, however the tactus is often ambiguous. One person might clap twice or half the speed of another, and even more problematically, in polyrhythmic music, each listener must choose which rhythm to clap to. A trained musician might even mark multiple tactuses with different limbs. Including tactus in a musical representation therefore requires this ambiguity to be confronted.
+In music, the _tactus_ is a high-level pulse felt in the music, known as the 'clapping rate', or the pulse underlying a piece of music that an individual or crowd chooses to clap along with. There is work to automatically infer the most likely tactus from a signal in the Music Information Retrieval field, however the tactus is often ambiguous. One person might clap twice or half the speed of another, and even more problematically, in polyrhythmic music, each listener must choose which rhythm to clap to. A trained musician might even mark multiple tactuses with different limbs. Including tactus in a musical representation therefore requires this ambiguity to be confronted.
 
-In Tidal and Strudel, the tactus is simply added as an optional pattern field, along with an additional `pureValue` field. In Tidal and therefore Haskell:
+In Tidal and Strudel, the tactus is simply added as an optional pattern field, along with an additional `pureValue` field. In Tidal's Haskell implementation, the type then looks like this:
 
 ```haskell
 data Pattern a =
@@ -96,9 +95,7 @@ data Pattern a =
             }
 ```
 
-Stepwise functions can then use the tactus when combining patterns, for example to find the relative proportion to create equal steps in the result of `s_cat`. The `pureValue` field holds a value only for 'stable' patterns, i.e. those of a single value that repeat once per cycle. This is maintained to support tactus calculation; a tactus can only be calculated by pattern transforming functions where certain arguments are stable.
-
-On this basis, a range of additional stepwise pattern combinators are defined, all prefixed by `s_`.
+Stepwise functions can then use the tactus when combining patterns, for example to find the relative proportion to create equal steps in the result of `s_cat`. The `pureValue` field holds a value only for 'stable' patterns, i.e. those of a single value that repeat once per cycle. This is maintained to support tactus calculation; a tactus can only be calculated by pattern transforming functions where certain arguments are stable. On this basis, a range of additional stepwise pattern combinators are defined, all prefixed by `s_`.
 
 The result of our earlier `s_cat` example is the equivalent of `"red green blue orange purple"`; this has a tactus of `5`, being the sum of its component tactuses. However, the tactus of our earlier `cat` example is ambiguous. There at least four possibilities:
 
@@ -111,19 +108,22 @@ Currently, a) is the default, and either b) or c) can be specified by marking on
 
 ## Stepwise combinators
 
-The combinators are in a fairly early stage of development, with the aim of making konnakol-inspired rhythms easy to express. For example, the `s_taper` function is inspired by `yati` structures, where phrase lengths are successively reduced or increased by one. The below applies `s_taper` to an integer sequence form 1 to 8, first building and then reducing the sequence by one step per repetition, as visualised in Fig. 1.
+The combinators are in a fairly early stage of development, with the aim of making konnakol-inspired rhythms easy to express. For example, the `s_taper` function is inspired by `yati` structures, where phrase lengths are successively reduced or increased by one. The below applies `s_taper` to an integer sequence form 1 to 8, first building and then reducing the sequence by one step per repetition, as visualised in Figure 1.
 
 \begin{figure*}
 \centering
 \includegraphics[width=1\textwidth]{figures/mrdangayati.png}
-\caption{mridanga yati}
+\caption{A mridanga yati in rupaka tala}
 \end{figure*}
 
 ```javascript
-stack(note("1 2 3 4 5 6 7 8").s_taper("-1 1", 8), s("clap clap wave").fast(6));
+stack(
+  note("1 2 3 4 5 6 7 8").s_taper("-1 1", 8),
+  s("clap clap wave").fast(6)
+);
 ```
 
-This increasing and decreasing is known as a _mridanga yati_, and is shown with the underlying clap-clap-wave pattern of the rupaka tala. Because the yati pattern has seventy two steps, and the tala has three, we can fit one cycle of the yati to six cycles of the tala, where we clap or wave every 4 steps of the yati.
+This increasing and decreasing is known as a _mridanga yati_, and is shown with the underlying clap-clap-wave pattern often used to mark the rupaka tala. Because the yati pattern has seventy two steps, and the rupaka tala can be viewed as having three, we can fit one cycle of the yati to six cycles of the tala, where we clap or wave every 4 steps of the yati.
 
 ```javascript
 "red pink".s_tour("black", "grey", "white");
@@ -159,20 +159,18 @@ It is important for a piece to align with the cyclic time-measure of a particula
 
 ## Calculation as music
 
-From a computer scientific perspective, this looks like a problem to solve; we could attempt to formalise an algorithm for fitting a korvai to a tala. However, at this point we should pause and consider where we draw the line of automation. As B C Manjunath points out^[See B C Manjunath's answer to a question on formalisation of Konnakol:
-https://www.youtube.com/watch?v=6kYwZ8S-qBQ&t=2697s], the body is a much more advanced system for thinking about sound than a computer.
+From a computer scientific perspective, this looks like a problem to solve; we could attempt to formalise an algorithm for fitting a korvai to a tala. However, at this point we should pause and consider where we draw the line of automation.
 
 This notional 'line of automation' divides aspects abstracted and automated by a computer, from those that we creatively and directly engage with as humans. Konnakol is by its nature computational, requiring calculation as part of its artistry, but this does not mean that we wish to automate it. Just as people do not generally start to learn to play the guitar by building a robot, we should be careful not to approach music as a problem to solve. Fundamentally, music is an activity, and as music-makers, we want to immerse ourselves in that activity.
 
-Indeed, live coders use programming languages not to automate the generation of music, but to turn programming itself into music-making, as a means of creating music in and for the moment. In this I argue that they are not only lead by ideas but more importantly by perception of musical outcomes. Live coding environments support immediately turning an idea into music, but it is perception of the musical outcome with all its unexpected rhythmic complexities and juxtapositions that inspire the next edits to drive the music forward. Rather than attempting to codify the rules of konnakol then, I focus on allowing musicians to choose, adapt and apply rules themselves, inspired by konnakol.
+As B C Manjunath points out^[See B C Manjunath's answer to a question on formalisation of Konnakol:
+https://www.youtube.com/watch?v=6kYwZ8S-qBQ&t=2697s], the body is a much more advanced system for thinking about sound than a computer. Accordingly, live coders use programming languages not to automate the generation of music, but to turn programming itself into music-making, as a means of creating music in and for the moment. In this I argue that they are not only lead by ideas but more importantly by perception of musical outcomes. Live coding environments support immediately turning an idea into music, but it is perception of the musical outcome with all its unexpected rhythmic complexities and juxtapositions that inspire the next edits to drive the music forward. Rather than attempting to codify the rules of konnakol then, I focus on giving space for musicians to choose, adapt and apply rules themselves, inspired by konnakol.
 
 # Developing practice
 
 To be meaningful, the technical development of computer music language should be part of a wider development of a culture of creative practice around it. To explore this, I decided to adopt a rule that I would no longer ask my computer to perform a musical algorithm that I could not perform myself. This constraint works to define a creative space, push my rhythmic practice forward, and create possibilities for shifting between and integrating code-driven and vocal performance of an algorithm.
 
-This approach has lead me to develop a performance practice that integrates live coding with algorithmic vocal patterns, involving the audience in clapping the tala and encouraging them to look for and feel the syncopations which result, and perhaps sense the heritage connection between algorithmic patterns [@mcleanAlgorithmicPattern2020] in vocal recitation and computer music. I am in the process of developing this practice through live performance, and informal feedback from my first public performance trialling this approach at EMF camp (May 2024, Eastnor UK) has been encouraging.
-
-_TODO_ - Corsica + quote from Lu
+This approach has lead me to develop a performance practice that integrates live coding with algorithmic vocal patterns, involving the audience in clapping the tala and encouraging them to look for and feel the syncopations which result, and perhaps sense the heritage connection between algorithmic patterns [@mcleanAlgorithmicPattern2020] in vocal recitation and computer music. I am in the process of developing this practice through live performance, and informal feedback from my first public performance trialling this approach at EMF camp (May 2024, Eastnor UK) and Corsica Studios (June 2024, London UK) has been encouraging. Although I have not conducted a thorough survey, one audience member Lu Wilson [did informally feed back](https://mas.to/@TodePond/112695287412247197) that "the maths bit was amazing. multiple people told me it helped them feel a lot more connected to what was going on". This points to a possibility that I found surprising - that introducing konnakol-inspired vocal practice to live coding performances could allow audiences to gain deeper appreciation of algorithmic music as a whole, by offering a new way to listen to it.
 
 # Cultural appropriation
 
