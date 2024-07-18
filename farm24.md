@@ -16,24 +16,22 @@ the music etched in stone, trapped in time, a stone tablet of commandments.}{T. 
 
 # Introduction
 
-As a computer music practice, the 'from-scratch' style of live coding
-centres around the manipulation of musical notation, but where those
-notations themselves are written, manipulated and finally deleted
-live, gaining an improvisatory, time-bound, ephemeral quality. In
-these respects, live coding is closer to active speech than printed
-notation. This gives an interesting perspective on the above quote
-from T. M. Krishna, in that even though live coding involves notation,
-it supports a similar approach to non-scribal techniques, centring
+As a computer music practice, the 'from-scratch' style of live coding centres
+around the manipulation of musical notation, but where those notations are
+written, manipulated and finally deleted live, gaining an improvisatory,
+time-bound, ephemeral quality. In these respects, live coding is closer to
+active speech than printed notation. This gives an interesting perspective on
+the above quote from T. M. Krishna, in that even though live coding involves
+notation, it supports a similar approach to non-scribal techniques, centring
 living memory and continuous change.
 
-In the following I compare the Carnatic, South Indian vocal practice
-of konnakol with contemporary algorithmic music, as a means to develop
-new live coding practice. The conduit for this work is the software
-development of the TidalCycles and Strudel live coding environments,
-adapting their representations for musical pattern inspired by
-Carnatic rhythmic structures. I will conclude with a search for
-musical meaning in this work, including consideration of cultural
-appropriation, and the possibilities of creating performances that
+In the following I compare the Carnatic, South Indian vocal practice of
+_konnakol_ with contemporary algorithmic music, as a means to develop new live
+coding practice. The conduit for this work is software development of the
+TidalCycles and Strudel live coding environments, adapting their representations
+for musical pattern inspired by Carnatic rhythmic structures. I will conclude
+with a search for musical meaning in this work, including consideration of
+cultural appropriation, and the possibilities of creating performances that
 shift between live coding of the computer and of the self.
 
 # Konnakol
@@ -54,48 +52,45 @@ performing, konnakol artists mark the tala with their hands, for
 example by repeating a sequence of clap-finger counts (laghu) and
 clap-waves (drutam).
 
-As a mono-linguist, I am unable to access much of the literature on
-the art form, but in English "The Art of Konnakkol" by Trichy
-@sankaranArtKonnakkolSolkattu2010a is an excellent practical
-introduction which covers some historical and cultural context, and
-vocalist and activist T.M. Krishna is a key reference for cultural and
-political background on Carnatic music
-[@krishnaSouthernMusic2017]. Lisa Young has made her Masters and PhD
-theses on konnakol available
+As a mono-linguist, I am unable to access much of the literature on the art
+form, but in English "The Art of Konnakkol" by Trichy
+@sankaranArtKonnakkolSolkattu2010a is an excellent practical introduction which
+covers some historical and cultural context, and vocalist and activist
+T.M. Krishna is a key reference for cultural and political background on
+Carnatic music [@krishnaSouthernMusic2017]. Lisa Young has made her Masters and
+PhD theses on konnakol available
 [@youngKonakkolHistoryDevelopment1998,@youngKonakkolHistoryDevelopment1998],
-Rafael Reina has a book on applying Carnatic rhythmical techniques to
-Western Classical music [@reinaApplyingKarnaticRhythmical2015a], and
-David Nelson has published a Solkattu Manual
-[@nelsonSolkattuManual2008]. For a computer music perspective, an
-interview by Rotherham-based musician Mark Fell with the Glasgow-based
-Indian musician Nakul Krishnamurthy is illuminating, exploring
+Rafael Reina has a book on applying Carnatic rhythmical techniques to Western
+Classical music [@reinaApplyingKarnaticRhythmical2015a], and David Nelson has
+published a Solkattu Manual [@nelsonSolkattuManual2008]. For a computer music
+perspective, an interview by Rotherham-based musician Mark Fell with the
+Glasgow-based musician Nakul Krishnamurthy is illuminating, exploring
 improvisation, notation and tradition in Carnatic music
 [@fellStructureSynthesisAnatomy2022, pp. 243-259].
 
 ## Learning Konnakol
 
-However, nothing can stand in for actually learning and practising
-konnakol rhythms.^[I use the phrase _konnakol rhythms_ advisedly;
-konnakol is a rich art form, the majority of which I have not touched
-on. So far my focus has been on rhythm.] Indeed, we should take care
-not to be too distracted by what Kofi Agawu calls "paper rhythms"
-[@agawuStructuralAnalysisCultural2006]; those rhythmic transformations
-which are apparent on paper, but have no living reality when
-performed, listened to and danced to. I have been lucky to take
-elementary konnakol lessons with renowned percussionist B C Manjunath,
-changing how I think about and make both music and music software.
+Although the above material is illuminating, nothing can stand in for actually
+learning and practising konnakol rhythms.^[I use the phrase _konnakol rhythms_
+advisedly; konnakol is a rich art form, the majority of which I have not touched
+on. So far my focus has been on rhythm.] Indeed, we should take care not to be
+too distracted by what Kofi Agawu calls "paper rhythms"
+[@agawuStructuralAnalysisCultural2006]; those rhythmic transformations which are
+apparent on paper, but have no living reality when performed, listened to and
+danced to. I have been lucky to take elementary konnakol lessons with renowned
+percussionist B C Manjunath, changing how I think about and make both music and
+music software.
 
-This learning process has allowed me to develop a sense of internal
-pulse within a tala, and to feel how rhythms move around within that
-tala. It has felt like learning rhythm from multiple perspectives; it
-is one thing to learn to recite a sequence, and something quite
-different to learn to recite it while clapping the tala. The rhythms
-feel different depending on whether I am attending to the syllables,
-the rhythmic structure, or the tala. I sometimes write the syllables
-down to help understand the structure of a rhythm, but it is only when
-I leave that notation behind that I begin to really learn and feel a
-rhythm. It is hard to explain in words, but taking in a new rhythm can
-at times be a slightly frustrating process of learning and forgetting
+This learning process has allowed me to develop a sense of internal pulse within
+a tala, and to feel how rhythms move around within that tala. It has felt like
+learning rhythm from multiple perspectives; it is one thing to learn to recite a
+sequence, and something quite different to learn to recite it while clapping the
+tala. The rhythms feel different depending on whether I am attending to the
+syllables, the rhythmic structure, or the tala. I sometimes write the syllables
+down to help understand the structure of a rhythm, but it is only when I leave
+that notation behind that I begin to really learn and feel a rhythm from these
+multiple perspectives. It is hard to explain in words, but taking in a new
+rhythm can at times be a slightly frustrating process of learning and forgetting
 as I come at it from different directions.
 
 Konnakol rhythms are fundamentally algorithmic, and this is why it is
@@ -133,24 +128,22 @@ https://www.youtube.com/live/6kYwZ8S-qBQ?feature=shared&t=1761]
 
 # TidalCycles and Strudel - live coding languages for pattern
 
-TidalCycles and Strudel are software environments for live coding that
-I am adapting to better represent konnakol-inspired rhythmic
-structures. TidalCycles (known as Tidal for short) is a domain
-specific language embedded in the pure functional Haskell programming
-language. Tidal was developed by myself from 2009, becoming a thriving
-free/open source project with many contributors
-[@mcleanMakingProgrammingLanguages2014]. In recent years, Tidal has
-been ported to several multi-paradigm languages, most notably to
-JavaScript as "Strudel" [@roosStrudelLiveCoding2023]. Strudel has
-largely reached feature parity with Tidal, with some differences
-following from the different constraints and opportunities of
-JavaScript, as well as some additional e.g. user interface,
-visualisation, and tonality features. This paper discusses features
-implemented in both -- for ease of explanation I will refer to the
-Haskell types when discussing implementation, and for accessibility to
-the reader with a web browser to hand, I will share examples written
-in Strudel. They have their own lives, but for the purposes of this
-paper, lets consider them two sides of the same coin.
+TidalCycles and Strudel are software environments for live coding that I am
+adapting to better represent konnakol-inspired rhythmic structures. TidalCycles
+(known as Tidal for short) is a domain specific language embedded in the pure
+functional Haskell programming language. Tidal was developed by myself from
+2009, becoming a thriving free/open source project with many contributors
+[@mcleanMakingProgrammingLanguages2014]. In recent years, Tidal has been ported
+to several multi-paradigm languages, most notably to JavaScript as "Strudel"
+[@roosStrudelLiveCoding2023]. Strudel has largely reached feature parity with
+Tidal, with some differences following from the different constraints and
+opportunities of JavaScript, as well as some additional features e.g. around
+user interface, visualisation, and tonality. This paper discusses features
+implemented in both -- for ease of explanation I will refer to the Haskell types
+when discussing implementation, and for accessibility to the reader with a web
+browser to hand, I will share examples written in Strudel. They have their own
+lives, but for the purposes of this paper, let's consider them as two sides of
+the same coin.
 
 As systems for making music^[Tidal and Strudel have also been used for
 other pattern-based media, such as making visuals, choreographies and
@@ -178,12 +171,12 @@ same `Pattern` datatype.
 
 ```haskell
 type Time = Rational
-data TimeSpan = TimeSpan {begin :: Time, 
+data TimeSpan = TimeSpan {begin :: Time,
                           end :: Time}
-data Event a = Event {whole :: Maybe TimeSpan, 
-                      active :: TimeSpan, 
+data Event a = Event {whole :: Maybe TimeSpan,
+                      active :: TimeSpan,
                       value :: a}
-data Pattern a = 
+data Pattern a =
     Pattern {query :: TimeSpan -> [Event a]}
 ```
 
@@ -235,7 +228,7 @@ quarter of cycle each, and the second half having three events of one
 sixth of a cycle each.^[The double-quoted text denotes the
 'mini-notatin', a mini-language implemented in both Strudel and Tidal
 for describing potentially complex polymetric rhythms. Here they are
-used to describe simple contiguous sequences.]  Sometimes however, we
+used to describe simple contiguous sequences.] Sometimes however, we
 might want divide time up 'stepwise', so that each event in the
 resulting pattern has equal duration, taking up one fifth of a
 cycle. Indeed, stepwise transformation and composition of patterns is
@@ -257,7 +250,7 @@ known until the resulting function is later queried.
 It took two different attempts to support this stepwise functionality. The first
 was to create a pattern type class, with the existing functional patterns as one
 instance, plus an additional type instance implementing patterns as data
-structures. This worked to a large extent, with a great deal of 
+structures. This worked to a large extent, with a great deal of
 functionality implemented relative to the type class, rather than the two
 instances. However despite much work, I came to the conclusion that this
 approach was over-complicated, which showed in the end-user interface. I
@@ -282,7 +275,7 @@ In Tidal and Strudel, the tactus is simply added as an optional
 pattern field, along with an additional `pureValue` field. In Haskell:
 
 ```haskell
-data Pattern a = 
+data Pattern a =
     Pattern {query :: State -> [Event a],
              tactus :: Maybe Time,
              pureValue :: Maybe a
@@ -331,10 +324,7 @@ repetition, as visualised in Fig. 1.
 \end{figure*}
 
 ```javascript
-stack(note("1 2 3 4 5 6 7 8")
-          .s_taper("-1 1", 8), 
-      s("clap clap wave").fast(6)
-     );
+stack(note("1 2 3 4 5 6 7 8").s_taper("-1 1", 8), s("clap clap wave").fast(6));
 ```
 
 This increasing and decreasing is known as a _mridanga yati_, and is shown with
@@ -344,7 +334,7 @@ the yati to six cycles of the tala, where we clap or wave every 4 steps of the
 yati.
 
 ```javascript
-"red pink".s_tour("black", "grey", "white")
+"red pink".s_tour("black", "grey", "white");
 ```
 
 ![](figures/s_tour.png){ height=3% width=40%}
@@ -361,9 +351,10 @@ pattern will repeat forever.
 \end{figure*}
 
 ```javascript
-stack("1 2 3 4 5 6 7".s_expand("3 2 1 1 2 3"),
-      "wave wave - clap - clap -".fast(6)
-     )
+stack(
+  "1 2 3 4 5 6 7".s_expand("3 2 1 1 2 3"),
+  "wave wave - clap - clap -".fast(6)
+);
 ```
 
 The above use of the `s_expand` function repeats the 1-7 integer sequence for
