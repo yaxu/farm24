@@ -15,6 +15,7 @@ Towards this end, in the following I compare the South Indian vocal practice of 
 
 # Konnakol
 
+\sloppy
 Konnakol is a Carnatic musical practice with ancient roots, developing since around 200CE [@sankaranArtKonnakkolSolkattu2010a, p. 3]. Konnakol involves the oral recitation of _solkattu_ phrase groups of vocable words, which are non-lexical, but closely associated with articulations of the mridangam drum, as well as movements within the bharatanatyam dance tradition. As a non-scribal, oral tradition, konnakol is generally transmitted and learned through recitation and listening rather than via notation. Konnakol rhythms are highly complex and heavily syncopated with frequent changes of speeds, and e.g. addition/subtraction of beats from successive repetitions. Still, there is always a steady underlying pulse, where konnakol artists are able to perfectly match their rhythmic transformations to a particular _tala_ structure. While performing, konnakol artists mark the tala with their hands, for example by repeating a sequence of clap-finger counts (laghu) and clap-waves (drutam).
 
 As a mono-lingual English speaker, I am unable to access much of the literature on the art form, but in English "The Art of Konnakkol" by Trichy Sankaran @sankaranArtKonnakkolSolkattu2010a is an excellent practical introduction which covers some historical and cultural context, and vocalist and activist T.M. Krishna is a key reference for cultural and political background on Carnatic music [@krishnaSouthernMusic2017]. Lisa Young has made her Masters and PhD theses on konnakol available
@@ -67,7 +68,7 @@ One limitation of representing patterns with functions is that they are opaque, 
 cat("red green", "blue orange purple");
 ```
 
-![](figures/cat.png){ height=3% width=80%}
+![](figures/cat.png){ height=3% width=44%}
 
 As you can see in the above visual example using Strudel, each cycle is split in half, with the first half containing two events of one quarter of cycle each, and the second half having three events of one sixth of a cycle each.^[The double-quoted text denotes the 'mini-notation', a mini-language implemented in both Strudel and Tidal for describing potentially complex polymetric rhythms. Here they are used to describe simple contiguous sequences.] Sometimes however, we might want divide time up 'stepwise', so that each event in the resulting pattern has equal duration, taking up one fifth of a cycle. Indeed, stepwise transformation and composition of patterns is a pervasive feature of Carnatic music. Strudel and Tidal now have an `s_cat` (stepwise cat) function for this:
 
@@ -75,7 +76,7 @@ As you can see in the above visual example using Strudel, each cycle is split in
 s_cat("red green", "blue orange purple");
 ```
 
-![](figures/s_cat.png){ height=3% width=80%}
+![](figures/s_cat.png){ height=3% width=44%}
 
 In the above, all five steps have the same duration. Even for this basic functionality, the `s_cat` function needs to know something about the structure of the two patterns in order to combine them. That is not possible when composing functions of time together, as the structure of the patterns is not known until the resulting function is later queried.
 
@@ -99,10 +100,14 @@ Stepwise functions can then use the tactus when combining patterns, for example 
 
 The result of our earlier `s_cat` example is the equivalent of `"red green blue orange purple"`; this has a tactus of `5`, being the sum of its component tactuses. However, the tactus of our earlier `cat` example is ambiguous. There at least four possibilities:
 
-a) clapping the onsets of component patterns = tactus of 2
-b) clapping according to the elements of the first component = tactus of 4
-c) clapping with the elements of the second compoents = tactus of 6
-d) clapping the lowest common multiple of both components = tactus of 12
+a) clapping the onsets of component patterns \
+   &rarr; tactus of 2
+b) clapping onsets of elements in first component \
+   &rarr; tactus of 4
+c) clapping onsets of elements in second component \
+   &rarr; tactus of 6
+d) clapping the lowest common multiple \
+   &rarr; tactus of 12
 
 Currently, a) is the default, and either b) or c) can be specified by marking one or the other as being the 'strong' component with a caret (`^`) symbol (e.g. `cat("^red green", "blue orange purple")` for b). d) is the result when both components are marked as 'strong' with `cat("^red green", "^blue orange purple")`, giving the tactus where every event falls on a 'clap'.
 
@@ -112,13 +117,13 @@ The combinators are in a fairly early stage of development, with the aim of maki
 
 \begin{figure*}
 \centering
-\includegraphics[width=1\textwidth]{figures/mrdangayati.png}
+\includegraphics[width=0.95\textwidth]{figures/mrdangayati.png}
 \caption{A mridanga yati in rupaka tala}
 \end{figure*}
 
 ```javascript
 stack(
-  note("1 2 3 4 5 6 7 8").s_taper("-1 1", 8),
+  note("1 2 3 4 5 6 7 8").s_taper("-1 1", 8), 
   s("clap clap wave").fast(6)
 );
 ```
@@ -129,13 +134,13 @@ This increasing and decreasing is known as a _mridanga yati_, and is shown with 
 "red pink".s_tour("black", "grey", "white");
 ```
 
-![](figures/s_tour.png){ height=3% width=80%}
+![](figures/s_tour.png){ height=3% width=44%}
 
 The `s_tour` function above adds the "red pink" pattern progressively backwards through each repetition of the black-grey-white sequence. Note that in these examples, only the first repetition is shown, but as a function of time, the pattern will repeat forever.
 
 \begin{figure*}
 \centering
-\includegraphics[width=1\textwidth]{figures/misrachapu.png}
+\includegraphics[width=0.95\textwidth]{figures/misrachapu.png}
 \caption{Grouping in misra chapu tala}
 \end{figure*}
 
@@ -170,7 +175,7 @@ As B C Manjunath points out^[See B C Manjunath's answer to a question on formali
 
 To be meaningful, the technical development of computer music language should be part of a wider development of a culture of creative practice around it. To explore this, I decided to adopt a rule that I would no longer ask my computer to perform a musical algorithm that I could not perform myself. This constraint works to define a creative space, push my rhythmic practice forward, and create possibilities for shifting between and integrating code-driven and vocal performance of an algorithm.
 
-This approach has lead me to develop a performance practice that integrates live coding with algorithmic vocal patterns, involving the audience in clapping the tala and encouraging them to look for and feel the syncopations which result, and perhaps sense the heritage connection between algorithmic patterns [@mcleanAlgorithmicPattern2020] in vocal recitation and computer music. I am in the process of developing this practice through live performance, and informal feedback from my first public performance trialling this approach at EMF camp (May 2024, Eastnor UK) and Corsica Studios (June 2024, London UK) has been encouraging. Although I have not conducted a thorough survey, one audience member Lu Wilson did [informally feed back](https://mas.to/@TodePond/112695287412247197) that "the maths bit was amazing. multiple people told me it helped them feel a lot more connected to what was going on". This points to the exciting possibility that introducing konnakol-inspired vocal practice to live coding performances could allow audiences to gain deeper appreciation of algorithmic music as a whole, by offering a new way to listen to it.
+This approach has lead me to develop a performance practice that integrates live coding with algorithmic vocal patterns, involving the audience in clapping the tala and encouraging them to look for and feel the syncopations which result, and perhaps sense the heritage connection between algorithmic patterns [@mcleanAlgorithmicPattern2020] in vocal recitation and computer music. I am in the process of developing this practice through live performance, and informal feedback from my first public performance trialling this approach at EMF camp (May 2024, Eastnor UK) and Corsica Studios (June 2024, London UK) has been encouraging. Although I have not conducted a thorough survey, informally some audience members indicated that explaining and demonstrating the mathematical aspects of carnatic rhythm using both my voice and code helped them understand the role of algorithms in music.^[With thanks to audience member and creative technologist Lu Wilson for this informal feedback: [https://mas.to/\@TodePond/112695287412247197](https://mas.to/@TodePond/112695287412247197)] This points to the exciting possibility that introducing konnakol-inspired vocal practice to live coding performances could allow audiences to gain deeper appreciation of algorithmic music as a whole, by offering a new way to listen to it.
 
 # Cultural Appropriation
 
