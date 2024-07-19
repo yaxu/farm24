@@ -9,5 +9,5 @@
 
 #sed 's/haskell \(ignore\|top\)/haskell/g' src/icfp.md > tmp/icfp.md
 pandoc --mathjax --citeproc farm24.md -o farm24.tex
-pdflatex foo.tex
+xelatex foo.tex
 mv foo.pdf farm24.pdf
