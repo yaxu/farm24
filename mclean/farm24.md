@@ -112,7 +112,7 @@ The combinators are in a fairly early stage of development, with the aim of maki
 
 \begin{figure*}
 \centering
-\includegraphics[width=0.9\textwidth]{figures/mrdangayati.png}
+\includegraphics[width=1\textwidth]{figures/mrdangayati.png}
 \caption{A mridanga yati in rupaka tala}
 \end{figure*}
 
@@ -135,7 +135,7 @@ The `s_tour` function above adds the "red pink" pattern progressively backwards 
 
 \begin{figure*}
 \centering
-\includegraphics[width=0.9\textwidth]{figures/misrachapu.png}
+\includegraphics[width=1\textwidth]{figures/misrachapu.png}
 \caption{Grouping in misra chapu tala}
 \end{figure*}
 
@@ -170,7 +170,7 @@ As B C Manjunath points out^[See B C Manjunath's answer to a question on formali
 
 To be meaningful, the technical development of computer music language should be part of a wider development of a culture of creative practice around it. To explore this, I decided to adopt a rule that I would no longer ask my computer to perform a musical algorithm that I could not perform myself. This constraint works to define a creative space, push my rhythmic practice forward, and create possibilities for shifting between and integrating code-driven and vocal performance of an algorithm.
 
-This approach has lead me to develop a performance practice that integrates live coding with algorithmic vocal patterns, involving the audience in clapping the tala and encouraging them to look for and feel the syncopations which result, and perhaps sense the heritage connection between algorithmic patterns [@mcleanAlgorithmicPattern2020] in vocal recitation and computer music. I am in the process of developing this practice through live performance, and informal feedback from my first public performance trialling this approach at EMF camp (May 2024, Eastnor UK) and Corsica Studios (June 2024, London UK) has been encouraging. Although I have not conducted a thorough survey, informally some audience members indicated that explaining and demonstrating the mathematical aspects of carnatic rhythm using both my voice and code helped them understand the role of algorithms in music.^[With thanks to audience member and creative technologist Lu Wilson for this informal feedback: [https://mas.to/\@TodePond/112695287412247197](https://mas.to/@TodePond/112695287412247197)] This points to the exciting possibility that introducing konnakol-inspired vocal practice to live coding performances could allow audiences to gain deeper appreciation of algorithmic music as a whole, by offering a new way to listen to it.
+This approach has lead me to develop a performance practice that integrates live coding with algorithmic vocal patterns, involving the audience in clapping the tala and encouraging them to look for and feel the syncopations which result, and perhaps sense the heritage connection between algorithmic patterns [@mcleanAlgorithmicPattern2020] in vocal recitation and computer music. I am in the process of developing this practice through live performance, and informal feedback from my first public performance trialling this approach at EMF camp (May 2024, Eastnor UK) and Corsica Studios (June 2024, London UK) has been encouraging. Although I have not conducted a thorough survey, one audience member Lu Wilson did [informally feed back](https://mas.to/@TodePond/112695287412247197) that "the maths bit was amazing. multiple people told me it helped them feel a lot more connected to what was going on". This points to the exciting possibility that introducing konnakol-inspired vocal practice to live coding performances could allow audiences to gain deeper appreciation of algorithmic music as a whole, by offering a new way to listen to it.
 
 # Cultural Appropriation
 
