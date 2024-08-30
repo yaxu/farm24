@@ -18,3 +18,7 @@ li {
 .reveal h5 {
   text-transform: none;
 }
+
+strudel-repl iframe {
+  height: 8em;
+}

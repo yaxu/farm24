@@ -22,10 +22,40 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          Alex McLean<br /><br />
-          <strong>Algorithmic Patterns with Strudel</strong><br />
-          <br />
-          <em>Then Try This</em>
+          <img
+            src="images/thentrythis-circ-logo.svg"
+            style="
+              width: 15%;
+              padding: 10px;
+              position: absolute;
+              right: 0px;
+              top: -100px;
+            "
+          />
+          <div>
+            Alex McLean<br /><br />
+            <strong>From Live Coding to Konnakol</strong><br />
+            <br />
+            <em>Then Try This</em>
+            <hr
+              style="
+                height: 0px;
+                border-width: 0;
+                color: gray;
+                background-color: gray;
+              "
+            />
+          </div>
+          <img
+            src="images/ukri.png"
+            style="
+              width: 16%;
+              background-color: #fff;
+              padding: 10px;
+              border: 1px solid #888;
+              float: left;
+            "
+          />
         </section>
         <section data-markdown>
           <textarea data-template>
@@ -40,16 +70,11 @@
                 * Inspired by South Indian, Carnatic music, specifically Konnakol
                 ---
                 ## Konnakol
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/-mS06lEmY3s?si=2oak40zrgLQiS8w_&amp;start=115" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                
-                B C Manjunath and Varijashree Venugopal 
-                ---
-                ## Konnakol
 
                 * Developed since around 200CE
                 * Non-lexical syllables related to strokes of the Mridangam drum
 
-                <img src="mridangam.jpg" style="float: right; width:25%; background-color: #fff; padding: 10px; border: 1px solid #888;"/>
+                <img src="images/mridangam.jpg" style="float: right; width:25%; background-color: #fff; padding: 10px; border: 1px solid #888;"/>
           </textarea>
         </section>
         <section>
@@ -90,23 +115,176 @@ s_cat("ta",
         </section>
         <section data-markdown>
           <textarea data-template>
-            ## Clapping the tala
+            ## Konnakol
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-mS06lEmY3s?si=2oak40zrgLQiS8w_&amp;start=115" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
+            B C Manjunath and Varijashree Venugopal 
             ---
-            ## Grouping in Misra Chapu tala
+        ## Clapping the tala
+
+            </textarea
+          >
+        </section>
+        <section>
+          <h2>Grouping in Misra Chapu tala</h2>
+
+          <img src="../figures/misrachapu.png" />
+
+          <strudel-repl>
+            <!--
+samples('github:yaxu/mrid/main'); setcps(0.6);
+
+p1: s("dhi tha dhi dhi thom thom dhi")
+  .s_expand("3 2 1 1 2 3")
+  .steps(8)._pianoroll({labels:true})
+p2: s("hh@0.5 hh oh oh").steps(2).hpf(1000)-->
+          </strudel-repl>
+        </section>
+        <section>
+          <h2>Mrdanga Yati in Rupaka tala</h2>
+
+          <img src="../figures/mrdangayati.png" />
+
+          <strudel-repl>
+            <!--
+samples('github:yaxu/mrid/main'); setcps(0.6);
+  
+  p1: note("0 1 2 3 4 5 6 7".scale("c:mixolydian")).s("piano")
+    .s_taper("-1 1", 8)
+    .steps(8)._pianoroll({labels:true})
+  p2: s("hh hh oh").steps(2).hpf(1000)-->
+          </strudel-repl>
+        </section>
+        <section>
+          <h2>Cyclewise vs Stepwise</h2>
+          <div class="container">
+            <div class="col">
+              <strudel-repl class="">
+                <!-- 
+samples('github:yaxu/mrid/main'); setcps(0.6);
+fastcat("dhi tha dhi", 
+        "dhi thom thom dhi").sound()
+  .spiral({inset:2})
+-->
+              </strudel-repl>
+            </div>
+            <div class="col">
+              <strudel-repl class="">
+                <!-- 
+samples('github:yaxu/mrid/main'); setcps(0.6);
+s_cat("dhi tha dhi", 
+      "dhi thom thom dhi").sound()
+  .spiral({inset:2})
+-->
+              </strudel-repl>
+            </div>
+          </div>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Implementation in Types
+            ```haskell
+type Time = Rational
+data TimeSpan = TimeSpan {begin :: Time,
+                                      end :: Time}
+data Event a = Event {whole :: Maybe TimeSpan,
+                                  active :: TimeSpan,
+                                  value :: a}
+data Pattern a =
+    Pattern {query :: TimeSpan -> [Event a],
+                         tactus :: Maybe Time, -- new!
+                         pureValue :: Maybe a  -- also new!
+                        }
+
+```
             ---
-            ## Yati in Rupaka tala
-            ---
-            ## From Cyclewise to stepwise
-            ---
-            ## Design issues
-            ---
-            ## Types
-            ---
-            ## Attempt one: split pattern into two-instance typeclass
-            * One for function of time, one for data struction
-            ---
-            ## Attempt two: function with metadata
-            ---
+            ## Stepwise joins
+```JavaScript
+polyJoin = function () {
+    const pp = this;
+    return pp.fmap((p) => p.s_extend(pp.tactus.div(p.tactus)))
+      .outerJoin();
+  };
+```
+```haskell
+polyJoin :: Pattern (Pattern a) -> Pattern a
+polyJoin pp = outerJoin $ 
+    fmap (\p -> s_extend (tactus pp / tactus p) p) pp
+```
+</textarea
+          >
+        </section>
+        <section>
+          <h2>Join fun</h2>
+
+          <strudel-repl>
+            <!--
+note("c e f [g a]"
+     .fmap(x => "0 12 7".add(x)).join()
+    )
+  .sound("folkharp")
+  ._pianoroll()
+-->
+          </strudel-repl>
+        </section>
+        <section>
+          <h2>Join fun</h2>
+
+          <strudel-repl>
+            <!--
+  note("c e f [g a]".add("0 12 7"))
+    .sound("folkharp")
+    ._pianoroll()
+  -->
+          </strudel-repl>
+        </section>
+        <section>
+          <h2>Tour</h2>
+
+          <strudel-repl>
+            <!--
+await samples('github:yaxu/spicule/master'); await samples('github:yaxu/mrid/main')
+
+const phrase = s("dhin - dhi - [ta ka]").color("yellow")
+
+p1: s("tha").color("red").s_tour(phrase, phrase, phrase)
+   .steps(8)
+   .pianoroll()
+
+p2: s("clap:3 ~ clap:3 clap:3").slow("2")
+  .gain(0.8)
+    -->
+          </strudel-repl>
+        </section>
+        <section>
+          <h2>In practice</h2>
+
+          <strudel-repl>
+            <!--
+// "emf yati" @by alex
+
+samples('github:yaxu/spicule/master')
+setcps(0.6)
+
+$: stack(n("1 2 3 4 5 6 7 8").scale("c:mixolydian").s("supersaw")
+         .ftype(2).lpf(perlin.range(1000,5000).slow(4)).lpq(4).lpenv(6)
+         .unison(16).spread(1).detune(rand)
+         ._punchcard()
+         ,
+         //s("arc").splice(8, "0 1 2 3 4 5 6 7"),
+         //n("0 1 2 3 4 5 6 7").s("cpu2").distort(0.2).speed(1.5)
+         )
+   //.s_taper("1 -1",8)
+   .steps(8)
+   //.superimpose(x => x.slow(8).add(note(12)))
+   
+
+//$: s("kick:4 kick:4 snare").steps(2).distort(0.9).gain(0.8)
+      -->
+          </strudel-repl>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
             ## Livecoding as Oral Tradition?
 
             <q>In all Indian musical traditions, learning, rationalization and sharing are part of an internal process within and between artists. The magnificence of this non-scribal technique is the acceptance of diversity and the possibility of continuous musical change. […] At no point is the music etched in stone, trapped in time, a stone tablet of commandments.</q>
