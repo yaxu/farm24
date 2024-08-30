@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/solarized.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    <link rel="stylesheet" href="css/local.css" />
+    <script src="https://unpkg.com/@strudel/embed@latest"></script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          Alex McLean<br /><br />
+          <strong>Algorithmic Patterns with Strudel</strong><br />
+          <br />
+          <em>Then Try This</em>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+                ## Software environments
+                * TidalCycles (Haskell) and Strudel (JavaScript)
+                * I'll refer to them interchangeably
+                * Both popular live coding environments
+                * Performing with (musical) patterns as pure functions of time
+                ---
+                ## Aim
+                * Designing new support for stepwise pattern-making within cyclic talas
+                * Inspired by South Indian, Carnatic music, specifically Konnakol
+                ---
+                ## Konnakol
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-mS06lEmY3s?si=2oak40zrgLQiS8w_&amp;start=115" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                
+                B C Manjunath and Varijashree Venugopal 
+                ---
+                ## Konnakol
+
+                * Developed since around 200CE
+                * Non-lexical syllables related to strokes of the Mridangam drum
+
+                <img src="mridangam.jpg" style="float: right; width:25%; background-color: #fff; padding: 10px; border: 1px solid #888;"/>
+          </textarea>
+        </section>
+        <section>
+          <h2>Solkattu</h2>
+          <div class="container">
+            <div class="col">
+              <ol>
+                <li>Tha</li>
+                <li>Tha ka</li>
+                <li>Tha ki ta</li>
+                <li>Tha ka dhi mi</li>
+                <li>Tha di gi na thom</li>
+                <li>Tha dim - gi na thom</li>
+                <li>Tha - dim - gi na thom</li>
+                <li>Tha dim - gi - na - thom</li>
+                <li>Tha - dim - gi - na - thom</li>
+              </ol>
+            </div>
+            <div class="col">
+              <strudel-repl>
+                <!--
+samples('github:yaxu/mrid/main'); 
+
+s_cat("ta", 
+      "tha dhi", 
+      "dhi tha dhi", 
+      "dhi thom thom dhi", 
+      "dhi ta dhi na thom", 
+      "dhi ta - dhi na thom", 
+      "dhi - ta - dhi na thom", 
+      "dhi ta - dhi - na - thom", 
+      "dhi - ta - dhi - na - thom", 
+     ).s()
+  .steps("8")-->
+              </strudel-repl>
+            </div>
+          </div>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Clapping the tala
+            ---
+            ## Grouping in Misra Chapu tala
+            ---
+            ## Yati in Rupaka tala
+            ---
+            ## From Cyclewise to stepwise
+            ---
+            ## Design issues
+            ---
+            ## Types
+            ---
+            ## Attempt one: split pattern into two-instance typeclass
+            * One for function of time, one for data struction
+            ---
+            ## Attempt two: function with metadata
+            ---
+            ## Livecoding as Oral Tradition?
+
+            <q>In all Indian musical traditions, learning, rationalization and sharing are part of an internal process within and between artists. The magnificence of this non-scribal technique is the acceptance of diversity and the possibility of continuous musical change. […] At no point is the music etched in stone, trapped in time, a stone tablet of commandments.</q>
+
+          </textarea>
+        </section>
+        <section>
+          <strudel-repl>
+            <!--
+    -->
+          </strudel-repl>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
